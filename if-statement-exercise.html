@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      if statement
+    </title>
+  </head>
+  <body>
+
+    <button onclick="
+    let coin = Math.random();
+    let guess = '';
+    console.log(coin);
+    
+    if (coin < 0.5){
+      guess = 'heads';
+    } else {
+      guess = 'tails';
+    }
+
+    if(guess === 'heads'){
+      alert('You win');
+    } else{
+      alert('You lose');
+    }
+
+    console.log(guess);
+      
+      ">heads</button>
+
+
+
+
+
+    <button onclick="
+    let coin1 = Math.random();
+    let guess1 = '';
+    console.log(coin1);
+    
+    if (coin1 < 0.5){
+      guess1 = 'heads';
+    } else {
+      guess1 = 'tails';
+    }
+
+    if(guess1 === 'tails'){
+      alert('You win');
+    } else{
+      alert('You lose');
+    }
+
+    console.log(guess1);
+    ">tails</button>
+
+  </body>
+  <script>
+    const curentDate = new Date();
+    const hour = curentDate.getHours();
+    const name = 'Fretz Estavillo';
+
+    // if (hour >= 6 && hour < 12){
+    //   console.log(`Goodmorning ${name}`);
+    // } else if (hour >= 13 && hour < 17) { 
+    //   console.log(`Goodafternoon ${name}`);
+    // } else {
+    //   console.log(`Goodevening ${name}`);
+    // }
+    // console.log(hour);
+
+
+    // const age = 22;
+    // const isHoliday = true;
+
+    // if ((age <= 6 || age >= 65) && isHoliday ){
+    //   console.log(`You have discount`);
+    // } else {
+    //   console.log(`You are not qualified`);
+    // }
+
+    
+
+    
+
+  </script>
+</html>

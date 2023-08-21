@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+
+
+   
+    <button class="js-time-button-start">start</button>
+    <button class="js-time-button-stop">stop</button>
+    <button class="js-time-button-reset">reset</button>
+    <p class="js-time">0</p>
+  
+    
+    
+
+    <script>
+      let time = 0;
+      let IntervalId;
+
+      document
+        .querySelector(".js-time-button-start")
+        .addEventListener("click", () => {
+          startInterval();
+        });
+
+      document
+        .querySelector(".js-time-button-stop")
+        .addEventListener("click", () => {
+          stopInterval();
+
+        });
+
+
+      document
+      .querySelector(".js-time-button-reset")
+      .addEventListener("click", () => {
+        time = 0
+        document.querySelector(".js-time").innerHTML = `${0}`;
+        stopInterval();
+
+      });
+
+      startInterval = () => {
+        IntervalId = setInterval(startTime, 1000);
+      };
+
+      function stopInterval() {
+        clearInterval(IntervalId);
+      }
+
+      function startTime() {
+        document.querySelector(".js-time").innerHTML = `${time}`;
+        time++;
+      }
+    </script>
+  </body>
+</html>

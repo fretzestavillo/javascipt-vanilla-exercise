@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+    <style>
+      button {
+        width: 100px;
+        height: 50px;
+        font-size: 18px;
+        background-color: #ffa500;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      }
+
+      #window {
+        width: 410px;
+        height: 80px;
+        font-size: 25px;
+        background-color: #ffa300;
+        color: #ffd;
+        text-align: right;
+        padding: 5px 10px;
+      }
+
+      #clear {
+        width: 310px;
+      }
+
+      /* Style the button on hover */
+      button {
+        background-color: #ff8c00;
+      }
+    </style>
+  </head>
+
+  <body>
+    <p>
+      <button
+        id="window"
+      >
+        0
+      </button>
+    </p>
+    <p>
+      <button
+        onclick="
+        calculation += '7';
+        pickNumber();
+      "
+      >
+        7
+      </button>
+
+      <button
+        onclick="
+        calculation += '8';
+        pickNumber();
+      "
+      >
+        8
+      </button>
+
+      <button
+        onclick="
+        calculation += '9';
+        pickNumber();
+      "
+      >
+        9
+      </button>
+
+      <button
+        onclick="
+        calculation += ' / ';
+        pickNumber();
+      "
+      >
+        /
+      </button>
+    </p>
+    <p>
+      <button
+        onclick="
+        calculation += '4';
+        pickNumber();
+      "
+      >
+        4
+      </button>
+
+      <button
+        onclick="
+        calculation += '5';
+        pickNumber();
+      "
+      >
+        5
+      </button>
+
+      <button
+        onclick="
+        calculation += '6';
+        pickNumber();
+      "
+      >
+        6
+      </button>
+
+      <button
+        onclick="
+        calculation += ' * ';
+        pickNumber();
+      "
+      >
+        x
+      </button>
+    </p>
+
+    <p>
+      <button
+        onclick="
+        calculation += '1';
+        pickNumber();
+      "
+      >
+        1
+      </button>
+
+      <button
+        onclick="
+        calculation += '2';
+        pickNumber();
+      "
+      >
+        2
+      </button>
+
+      <button
+        onclick="
+        calculation += '3';
+        pickNumber();
+        "
+      >
+        3
+      </button>
+
+      <button
+        onclick="
+        calculation += ' - ';
+        pickNumber();
+      "
+      >
+        -
+      </button>
+    </p>
+    <p>
+      <button
+        onclick="
+        calculation += '0';
+        pickNumber();
+      "
+      >
+        0
+      </button>
+
+      <button
+        onclick="
+        calculation += '.';
+        pickNumber();
+      "
+      >
+        .
+      </button>
+
+      <button
+        onclick="
+        calculation += ' + ';
+        pickNumber();
+      "
+      >
+        +
+      </button>
+
+      <button
+        onclick="
+        calculation = eval(calculation);
+        pickNumber();
+      "
+      >
+        =
+      </button>
+    </p>
+    <p>
+      <button
+        onclick="
+        calculation += ' ** ';
+        pickNumber();
+      "
+      >
+        Exponent
+      </button>
+
+      <button
+        onclick="
+        calculation = '0';
+        pickNumber();
+      "
+      >
+        Clear
+      </button>
+
+    </p>
+  </body>
+
+  <script>
+    let calculation = "";
+    let paragraph = "";
+
+    function pickNumber(){
+        paragraph = document.getElementById('window');
+        paragraph.textContent = `${calculation}`;
+       
+    }
+
+    
+
+  </script>
+</html>

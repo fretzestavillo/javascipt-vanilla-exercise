@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      button {
+        width: 100px;
+        height: 50px;
+        font-size: 18px;
+        background-color: #ffa500;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      }
+  </style>
+  </head>
+  <body>
+
+  <button onclick="
+    playGame();
+  
+    ">heads</button>
+
+  <button onclick="
+    playGame();
+  
+
+  ">tails</button>
+
+
+
+
+
+
+
+
+    <script>
+
+     function playGame(){
+      const randomNumber = Math.random();
+      const result = randomNumber < 0.5 ? 'heads' : 'tails';
+
+      const guess = 'heads';
+      console.log(guess === result ? 'You win!' : 'You lose!');
+
+
+     }
+
+
+    </script>
+  </body>
+</html>

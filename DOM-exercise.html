@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Exercise</title>
+  </head>
+  <body>
+    <button class="js-button">9a</button>
+    <button
+      class="js-second-button"
+      onclick="
+clickButton();
+"
+    >
+      9b
+    </button>
+
+    <p></p>
+
+    <button
+      class="js-heads-button"
+      onclick="
+document.querySelector('.result').innerHTML = `You chose: heads `;
+"
+    >
+      heads
+    </button>
+
+    <button
+      class="js-tails-button"
+      onclick="
+document.querySelector('.result').innerHTML = `You chose: tails `;
+"
+    >
+      tails
+    </button>
+
+    <p class="result">You chose:</p>
+
+    <input
+      class="js-input"
+      onkeydown="
+
+handleChanger(event);
+
+"
+    />
+
+    <button
+      class="js-submit-button"
+      onclick="
+inputChanger();
+"
+    >
+      submit
+    </button>
+
+    <input
+      placeholder="Type something"
+      class="js-input1"
+      onkeyup="
+        const inputElement = document.querySelector('.js-input1');
+        document.querySelector('.js-message')
+          .innerHTML = inputElement.value;
+      "
+    />
+
+    <p class="js-message"></p>
+
+    <script>
+      function handleChanger(event) {
+        if (event.key === "Enter") {
+          inputChanger();
+        }
+      }
+
+      function inputChanger() {
+        const name = "George Wan";
+        const inputElement = document.querySelector(".js-input");
+        inputElement.value = `${name}`;
+      }
+
+      function clickButton() {
+        const buttonElement = document.querySelector(".js-second-button");
+
+        if (buttonElement.innerText === "9b") {
+          buttonElement.innerText = "9b done!";
+        } else {
+          buttonElement.innerText = "9b";
+        }
+      }
+    </script>
+  </body>
+</html>

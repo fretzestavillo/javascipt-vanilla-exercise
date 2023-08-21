@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+
+      class Planet{
+        constructor(name){
+          this.name = name
+        }
+        revolve(){
+          console.log(this.name, ' is now revolving');
+        }
+        rotate(){
+          console.log(this.name, ' is now rotating');
+        }
+      }
+
+      class AlienPlanet extends Planet{
+        super(name){
+          this.name = name
+        }
+
+        explode(){
+          console.log(this.name, ' is now exploding');
+        }
+      }
+
+      const earth = new Planet('earth')
+      const mars = new Planet('mars')
+      const uranus = new Planet('uranus')
+      const venus = new Planet('venus')
+      const mercury = new Planet('mercury')
+      const jupiter = new Planet('jupiter')
+      const yeeckoke = new AlienPlanet('yeeckoke')
+
+      
+    </script>
+  </body>
+</html>
